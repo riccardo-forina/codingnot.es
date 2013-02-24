@@ -1,0 +1,5 @@
+docroot is the directory used as docroot (you don't say...) by Apache.
+
+Try to do not put static files inside the docroot, use the /static directory instead.
+Apache will be configured to responde to all the urls starting with /static serving the content of that directory.
+

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#"> 
+<head>
+    <meta charset="utf-8">
+    <title>{% block metatitle %}{% if page %}{{ page.title }} - {% endif %}Python / Javascript / Django coding notes by Riccardo Forina{% endblock metatitle %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block metadescription %}Coding notes about web development done with Python, Django and Javascript.{% endblock metadescription %}">
+    <meta name="author" content="Riccardo Forina">
+    <!--<meta property="og:image" content="http://www.codingnot.es{{ url_for('static', filename="images/riccardoforina.jpg") }}"/>-->
+    <meta name="msvalidate.01" content="92456732CB2C6346C924186C507FE8F1" />
+
+    <link rel="canonical" href="http://www.codingnot.es{{ request.path }}" />
+
+    <!-- ATOM -->
+    <link href="{{ url_for('site_feed') }}" rel="alternate" title="Coding notes by Riccardo Forina" type="application/atom+xml">
+
+    <!-- Le styles -->
+    {# <link href='http://fonts.googleapis.com/css?family=Comfortaa:400' rel='stylesheet' type='text/css'> #}
+    {# <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'> #}
+    {# <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> #}
+    {# <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,700,400italic,700italic' rel='stylesheet' type='text/css'> #}
+
+    <link href="{{ url_for('static', filename="bootstrap21/css/bootstrap.min.css") }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename="bootstrap21/css/bootstrap-responsive.min.css") }}" rel="stylesheet">
+    {# <link href="{{ url_for('static', filename="css/main.css") }}?v=201212145v1" rel="stylesheet"> #}
+    <link href="{{ url_for('static', filename="google-code-prettify/prettify.css") }}" type="text/css" rel="stylesheet" />
+
+    {% assets filters="less", output="css/codingnotes.css", 'css/codingnotes.less' %}
+    <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+    {% endassets %}
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename="icons/favicon.ico") }}">
+
+    {% if not config.DEBUG %}
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-33772592-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    {% endif %}
+    {% block extrahead %}{% endblock extrahead %}
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3 sidebar">
+                <header>
+                    <a class="maintitle shake" href="{{ url_for('index')}}">
+                        coding<b>notes</b>
+                    </a>
+                </header>
+                {% include "_vcard.html" %}
+                <nav>
+
+                    <div class="hidden-phone">{% include "_adv.html" %}</div>
+
+                    <div class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style hidden-phone">
+                        {% include "_addthis.html" %}
+                    </div>
+                </nav>
+            </div>
+            <div class="span9 content">
+                <div class="container-fluid">
+                    {% block content %}
+                    {% endblock content %}
+
+                    {% block aftercontent %}
+                    {% endblock aftercontent %}
+                </div>
+            </div>
+        </div>
+        <footer class="row-fluid sitefooter">
+            <div class="span4 hidden-phone">
+                {% block sidebar %}
+                {% endblock sidebar %}
+            </div>
+            <div class="span4 hidden-phone">
+                {% include "_adv.html" %}
+            </div>
+            <div class="span4">
+                <h2>Disclaimer</h2>
+                <p>These thoughts and opinions are my own, and not that of my employer.</p>
+                <p>Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</p>
+            </div>
+        </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <!--<script src="{{ url_for('static', filename="bootstrap21/js/bootstrap.min.js") }}"></script>-->
+    <script type="text/javascript" src="{{ url_for('static', filename="google-code-prettify/prettify.js") }}"></script>
+    <script type="text/javascript">
+        prettyPrint();
+    </script>
+    <!--<script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+    </script>-->
+    <script type="text/javascript">
+        var addthis_config = {
+            url: '{% if config.DEBUG %}http://www.codingnot.es{% endif %}{% if page %}{{ url_for('page', path=page.path) }}{% else %}/{% endif %}'
+            data_track_clickback: true,
+            data_track_addressbar: true,
+            ui_click: true,
+            data_ga_property: "UA-33772592-1",
+            data_ga_social: true,
+        };
+    </script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-510231d6102565a5"></script>
+
+    {% block extrajs %}{% endblock extrajs %}
+
+
+</body>
+</html>

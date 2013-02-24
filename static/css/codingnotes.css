@@ -1,0 +1,384 @@
+@-webkit-keyframes spaceboots,
+@-moz-keyframes spaceboots,
+@keyframes spaceboots {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\000034}}
+  0% {
+    -webkit-transform: translate(2px, 1px) rotate(0deg);
+    -moz-transform: translate(2px, 1px) rotate(0deg);
+    -o-transform: translate(2px, 1px) rotate(0deg);
+    -ms-transform: translate(2px, 1px) rotate(0deg);
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\000035}}
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+    -moz-transform: translate(-1px, -2px) rotate(-1deg);
+    -o-transform: translate(-1px, -2px) rotate(-1deg);
+    -ms-transform: translate(-1px, -2px) rotate(-1deg);
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\000036}}
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+    -moz-transform: translate(-3px, 0px) rotate(1deg);
+    -o-transform: translate(-3px, 0px) rotate(1deg);
+    -ms-transform: translate(-3px, 0px) rotate(1deg);
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\000037}}
+  30% {
+    -webkit-transform: translate(0px, 2px) rotate(0deg);
+    -moz-transform: translate(0px, 2px) rotate(0deg);
+    -o-transform: translate(0px, 2px) rotate(0deg);
+    -ms-transform: translate(0px, 2px) rotate(0deg);
+    transform: translate(0px, 2px) rotate(0deg);
+  }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\000038}}
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+    -moz-transform: translate(1px, -1px) rotate(1deg);
+    -o-transform: translate(1px, -1px) rotate(1deg);
+    -ms-transform: translate(1px, -1px) rotate(1deg);
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\000039}}
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+    -moz-transform: translate(-1px, 2px) rotate(-1deg);
+    -o-transform: translate(-1px, 2px) rotate(-1deg);
+    -ms-transform: translate(-1px, 2px) rotate(-1deg);
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\0000310}}
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+    -moz-transform: translate(-3px, 1px) rotate(0deg);
+    -o-transform: translate(-3px, 1px) rotate(0deg);
+    -ms-transform: translate(-3px, 1px) rotate(0deg);
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\0000311}}
+  70% {
+    -webkit-transform: translate(2px, 1px) rotate(-1deg);
+    -moz-transform: translate(2px, 1px) rotate(-1deg);
+    -o-transform: translate(2px, 1px) rotate(-1deg);
+    -ms-transform: translate(2px, 1px) rotate(-1deg);
+    transform: translate(2px, 1px) rotate(-1deg);
+  }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\0000312}}
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+    -moz-transform: translate(-1px, -1px) rotate(1deg);
+    -o-transform: translate(-1px, -1px) rotate(1deg);
+    -ms-transform: translate(-1px, -1px) rotate(1deg);
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\0000313}}
+  90% {
+    -webkit-transform: translate(2px, 2px) rotate(0deg);
+    -moz-transform: translate(2px, 2px) rotate(0deg);
+    -o-transform: translate(2px, 2px) rotate(0deg);
+    -ms-transform: translate(2px, 2px) rotate(0deg);
+    transform: translate(2px, 2px) rotate(0deg);
+  }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\0000314}}
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+    -moz-transform: translate(1px, -2px) rotate(-1deg);
+    -o-transform: translate(1px, -2px) rotate(-1deg);
+    -ms-transform: translate(1px, -2px) rotate(-1deg);
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\0000316}}
+.shake {
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\0000318}}
+.shake:hover {
+  -webkit-animation: spaceboots 0.8s linear infinite;
+  -moz-animation: spaceboots 0.8s linear infinite;
+  -o-animation: spaceboots 0.8s linear infinite;
+  -ms-animation: spaceboots 0.8s linear infinite;
+  animation: spaceboots 0.8s linear infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\0000324}}
+.shakeAndStopOnHover {
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\0000318}}
+.shakeAndStopOnHover:hover {
+  -webkit-animation: spaceboots 0.8s linear infinite;
+  -moz-animation: spaceboots 0.8s linear infinite;
+  -o-animation: spaceboots 0.8s linear infinite;
+  -ms-animation: spaceboots 0.8s linear infinite;
+  animation: spaceboots 0.8s linear infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/animations\.less}line{font-family:\0000326}}
+.shakeAndStopOnHover:hover {
+  -webkit-transform: translate(0px, 0px) rotate(0deg);
+  -moz-transform: translate(0px, 0px) rotate(0deg);
+  -o-transform: translate(0px, 0px) rotate(0deg);
+  -ms-transform: translate(0px, 0px) rotate(0deg);
+  transform: translate(0px, 0px) rotate(0deg);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000317}}
+body {
+  background: #1c1d22;
+  color: #f7f9f8;
+  font-size: 1em;
+  font-weight: 300;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000325}}
+.spacedbox {
+  padding: 15px 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000330}}
+.divider {
+  border-bottom: 10px solid #090A0A;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000334}}
+.container-fluid {
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000338}}
+.sidebar {
+  padding: 15px 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000341}}
+.sidebar h1 {
+  margin: 50px 0 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000346}}
+.content {
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000351}}
+.sitefooter {
+  padding: 15px 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #2a2d34;
+  box-shadow: inset 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000359}}
+.link {
+  color: #4993c2;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000361}}
+.link:hover {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000366}}
+.title {
+  font-weight: 300;
+  font-size: 160%;
+  line-height: 1.2;
+}
+@media (min-width: 767px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000370}}
+  .title {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 766px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000376}}
+  .title {
+    font-size: 100%;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000379}}
+.title a:hover {
+  color: inherit;
+  cursor: pointer;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000385}}
+.maintitle {
+  color: #ffffff;
+  font-size: 2em;
+  line-height: 2;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000389}}
+.maintitle:hover b {
+  color: #f7f9f8;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000394}}
+a {
+  color: #4993c2;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000361}}
+a:hover {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000398}}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  font-size: 160%;
+  line-height: 1.2;
+}
+@media (min-width: 767px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000370}}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 766px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000376}}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 100%;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\0000379}}
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+  color: inherit;
+  cursor: pointer;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003100}}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003105}}
+article {
+  background: #ffffff;
+  color: #15161a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003109}}
+article header {
+  padding: 15px 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #375e99;
+  color: #f7f9f8;
+  font-size: 160%;
+  font-weight: 300;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003116}}
+article header a {
+  color: inherit;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003120}}
+article header p {
+  font-size: 70%;
+  line-height: 1.3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003127}}
+article nav {
+  padding: 15px 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #dbe5f1;
+  color: #15161a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003133}}
+article .text {
+  padding: 15px 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #15161a;
+  font-weight: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003139}}
+article .text p,
+article .text ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003145}}
+article footer {
+  padding: 15px 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #2a2d34;
+  color: #f7f9f8;
+  line-height: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003153}}
+article footer .tags {
+  text-align: right;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003156}}
+article footer .tags a {
+  color: inherit;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003163}}
+article:not(:last-child) footer {
+  border-bottom: 10px solid #090A0A;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003169}}
+aside {
+  background: #dbe5f1;
+  color: #15161a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003181}}
+.prettyprint {
+  max-height: 395px;
+  overflow: scroll;
+}
+@media (max-width: 767px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003205}}
+  body {
+    padding: 0;
+  }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/riccardo\/riccardoforina\.rhcloud\.com\/notes\/wsgi\/static\/css\/-}line{font-family:\00003208}}
+  .facebookframe {
+    width: 100%;
+    margin-left: 0px;
+  }
+}

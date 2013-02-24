@@ -1,0 +1,9 @@
+<div class="post_meta">
+    Posted <abbr class="published" title="{{ page.date.isoformat() }}">{{ page.date.strftime('%B %dth, %Y') }}</abbr>
+    {% if page.tags|length %}
+        in
+        {% for page_tag in page.tags %}
+            <a class="badge" href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>
+        {% endfor %}
+    {% endif %}
+</div>

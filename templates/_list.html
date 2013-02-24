@@ -1,0 +1,38 @@
+<div class="pages">
+{% for page in pages %}
+    <article class="row-fluid">
+        <div class="span12">
+            <header class="row-fluid">
+                <h2><a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a></h2>
+                <p>{{ page.abstract|safe }}</p>
+            </header>
+            <nav class="row-fluid">
+                <a href="{{ url_for("page", path=page.path) }}#disqus_thread">loading comments</a>
+            </nav>
+            <div class="row-fluid">
+                <div class="span12 text">
+                    {{ page.html|truncate_html_words(100)|safe }}
+
+                    <p>
+                        <strong><a href="{{ url_for("page", path=page.path) }}">Continue reading&hellip;</a></strong>
+                    </p>
+                </div>
+            </div>
+            <footer class="row-fluid">
+                <date title="{{ page.date.isoformat() }}" class="span6">
+                    <span>{{ page.date.strftime('%d') }}</span>
+                    {{ page.date.strftime('%B') }}
+                </date>
+                <div class="span6 tags">
+                    Posted under 
+                    {% for page_tag in page.tags %}
+                    <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </div>
+            </footer>
+        </div>
+    </article>
+{% else %}
+    Ops, nothing here.
+{% endfor %}
+</div>

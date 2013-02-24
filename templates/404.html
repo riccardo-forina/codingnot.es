@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+    <meta name="robots" content="noindex, follow">
+{% endblock extrahead %}
+
+{% block content %}
+<section>
+    <header>
+        <h1>404. Can I suggest you something else?</h1>
+    </header>
+
+
+    {% with pages=pages  %}
+        {% include "_list.html" %}
+    {% endwith %}
+</section>
+{% endblock content %}

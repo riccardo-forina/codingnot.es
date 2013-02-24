@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block metatitle %}Riccardo Forina's résumé{% endblock metatitle %}
+
+{% block metadescription %}Front-end and back-end developer with strong operations management skill{% endblock metadescription %}
+
+{% block content %}
+<article>
+    <header class="row-fluid">
+        <div class="span10">
+            <h1>Riccardo Forina</h1>
+        </div>
+        <p class="span2">
+            Milan, Italy<br>
+            +393409090319<br>
+            r.forina@gmail.com
+        </p>
+    </header>
+
+    <div class="text">
+        <p class="lead">
+            I' m a front-end developer and back-end developer with strong operations management skill.<br>
+            In my free time I work on open source projects and write technical articles on my website.
+        </p>
+
+        <h2>Technical Skills</h2>
+
+        <p>javascript, python, django, css, less, jquery, backbone.js, nginx, memcached, mysql</p>
+
+        <h2>Experience</h2>
+
+        <h3>Web Architect – Prodigys Technology <small>January 2010 - Current</small></h3>
+        <dl>
+            <dt>Plug &amp; Play social plugins (like Facebook's)</dt>
+            <dd>Hight traffic (more than 500k visitors/day) plugins, served by a single Amazon EC2 machine with less than 2Gb RAM.</dd>
+            <dt>SSO proxy</dt>
+            <dd>A wrapper around XML based web services to add web 2.0 capabilities (cross-domain, json). Optimized to reduce latency using non blocking sockets to fetch more data at once. High traffic (> 1Mln request/day), but still runs on a single EC2 machine.</dd>
+            <dt>Vodafone Lab mobile website</dt>
+            <dd>A backbone.js powered mobile version of the Vodafone Lab website (http://lab.vodafone.it/m/)</dd>
+            <dt>Frontend consultant</dt>
+            <dd>Provided technical support and reports to optimize the loading speed of Vodafone Italy web portal.</dd>
+            <dt>Team leader</dt>
+            <dd>Introduced GIT and django in the job workflow and script-based deploys.</dd>
+        </dl>
+
+        <h3>Web programmer – Neo Network <small>September 2009 - January 2010</small></h3>
+        <dl>
+            <dt>Website frontend &amp; backend</dt>
+            <dd>Asp.NET MVC powered; high traffic; custom user registration.</dd>
+            <dt>Website porting from .NET to Django</dt>
+            <dd>Rework of the paneangeli.it website, based on a proprietary .NET CMS, adding progressive enhancement, Salesforce integration and SEO optimization (from a single page architecture to hundreds of indexable pages).</dd>
+        </dl>
+
+        <h3>Analyst Programmer – IMILLE Srl <small>February 2008 - September 2009</small></h3>
+        <dl>
+            <dt>Custom CMS</dt>
+            <dd>Worked on the award winning website pandistelle.it, built with python (django); integration with a SOAP based SSO (helped to test and enhance it).</dd>
+            <dt>Various website</dt>
+            <dd>PHP based</dd>
+        </dl>
+
+        <h2>Education</h2>
+        <dl>
+            <dt>Attended Computer Science</dt>
+            <dd>Not completed for career opportunities – University of Turin 2001 - 2003</dd>
+            <dt>High school</dt>
+            <dd>Informatics and telecommunication - ITIS Amedeo Avogadro 1995 - 2001</dd>
+        </dl>
+
+
+        <h2>Projects & Interests</h2>
+
+        <dl>
+            <dt>django-admin-bootstrapped - https://github.com/riccardo-forina/django-admin-bootstrapped</dt>
+            <dd>A Django application to provide bootstrap theming to the admin interface</dd>
+            <dt>status-jquery-crawler – https://github.com/riccardo-forina/status-jquery-crawler</dt>
+            <dd>A plug&play javascript application to check for broken links in a website.</dd>
+        </dl>
+    </div>
+
+    <footer>
+        <a href="{{ url_for('static', filename='Riccardo Forina\'s Resume.pdf' )}}">Download as PDF</a>
+    </footer>
+</article>
+{% endblock content %}
+
+{% block sidebar %}
+{% include "_latest.html" %}
+{% endblock sidebar %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block metatitle %}Tags - {{ super() }}{% endblock metatitle %}
+
+{% block extrahead %}
+    <meta name="robots" content="noindex, follow">
+{% endblock extrahead %}
+
+{% block content %}
+    <h2>Tags</h2>
+    <ul class="unstyled">
+    {% for tag in tags %}
+        <li><a href="{{ url_for("tag", tag=tag) }}">{{ tag }}</a></li>
+    {% else %}
+        <li>Ops, nothing here.</li>
+    {% endfor %}
+    </ul>
+
+{% endblock content %}

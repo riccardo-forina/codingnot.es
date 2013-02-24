@@ -1,0 +1,27 @@
+*NOGIT*
+/media
+*virtualenv*
+newrelic.ini
+
+# Mac OS X
+*.DS_Store
+
+# Generated files
+*.o
+*.pyc
+.webassets-cache
+
+#Python modules
+MANIFEST
+dist/
+build/
+
+# Backup files
+*~.nib
+
+# IDEs
+.settings
+.project
+.idea
+.pydevproject
+
