@@ -7,7 +7,7 @@
     <header class="row-fluid">
         <div class="hidden-phone">
             {% from "_sharrre.html" import share_url %}
-            {{ share_url("%s%s" % ("http://www.codingnot.es" if config.DEBUG else "",  url_for("page", path=page.path)), page.meta.title) }}
+            {{ share_url("http://www.codingnot.es%s" % url_for("page", path=page.path), page.meta.title) }}
         </div>
         <h1>
             {{ page.title }}
