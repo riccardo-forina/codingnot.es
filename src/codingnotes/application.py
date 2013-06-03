@@ -3,6 +3,9 @@ import sys
 import re
 import socket
 import pytz
+import urllib
+import urllib2
+import json
 from urlparse import urljoin
 from datetime import datetime, time
 from flask import Flask, render_template, request, url_for, Response
@@ -136,6 +139,40 @@ def tag(tag):
         tag=tag,
         tags=get_tags(),
     )
+
+
+@app.route('/_services/gplus_count')
+def gplus_share_count():
+    url = request.args.get('url', '')
+    data = json.dumps([{
+        "method": "pos.plusones.get",
+        "id": "p",
+        "params": {
+            "nolog": True,
+            "id": url,
+            "source": "widget",
+            "userId": "@viewer",
+            "groupId": "@self"
+        },
+        "jsonrpc": "2.0",
+        "key": "p",
+        "apiVersion": "v1"
+    }]);
+    req = urllib2.Request(
+        "https://clients6.google.com/rpc?key=AIzaSyCKSbrvQasunBoV16zDH9R33D88CeLr9gQ",
+        data, {
+            'Content-Type': 'application/json'
+        })
+    f = urllib2.urlopen(req)
+    response = f.read()
+    f.close()
+
+    result = json.loads(response)
+
+    return json.dumps({
+        'url': url,
+        'count': int(result[0]['result']['metadata']['globalCounts']['count'])
+    })
 
 
 @app.route('/<path:path>/')
@@ -285,7 +322,7 @@ if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == "build":
         freezer.freeze()
     else:
-        app.run('0.0.0.0')
+        app.run('0.0.0.0', 10000)
 
 
 if __name__ != '__main__':

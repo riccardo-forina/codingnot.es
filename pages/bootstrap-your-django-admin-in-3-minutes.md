@@ -7,6 +7,10 @@ Do you want Bootstrap on your Django admin app? You do not want to mess with the
 
 ## Updates
 
+2013-05-29: Version bump to 0.4.1. Various bugfixes. See the CHANGELOG for more details  
+2013-05-27: Version bump to 0.4. **Now compatibile with django-cms **. See the CHANGELOG for more details  
+2013-02-06: list actions bugfix
+2013-01-19: Registration template fixes
 2013-01-17: Version bump to 0.3. Some UI cleaning and documentation. See the CHANGELOG for more details  
 2012-12-19: Version bump to 0.2. Sortable inlines. See the CHANGELOG for more details  
 2012-11-20: Version bump to 0.1.1. Couple of bugfixing, Bootstrap upgraded to version 2.2.1, etc. See the CHANGELOG for more details  
@@ -76,6 +80,40 @@ You can now use the inline as usual. The result will look like this:
 <img src="/static/screens/django_admin_bootstrapped_screen_inlines.png">
 
 This feature was brought to you by [Kyle Bock](https://github.com/kwbock). Thank you Kyle!
+
+
+### XHTML Compatible
+
+Compatible with both html and xhtml.
+To enable xhtml for your django app add the following to your settings.py:
+DEFAULT_CONTENT_TYPE = 'application/xhtml+xml'
+
+### Generic lookups in admin
+
+<img src="https://a248.e.akamai.net/camo.github.com/2848fec376b4af6d6a08e2a3a7d575569115f998/687474703a2f2f692e696d6775722e636f6d2f766970547453732e706e67" alt="Generic lookups in admin">
+
+All that needs to be done is change the admin widget with either formfield_overrides like this:
+
+    from django_admin_bootstrapped.widgets import GenericContentTypeSelect
+
+    class SomeModelAdmin(admin.ModelAdmin):
+        formfield_overrides = {
+            models.ForeignKey: {'widget': GenericContentTypeSelect},
+        }
+
+Or if you want to be more specific:
+
+    from django_admin_bootstrapped.widgets import GenericContentTypeSelect
+
+    class SomeModelAdmin(admin.ModelAdmin):
+        def formfield_for_dbfield(self, db_field, **kwargs):
+            if db_field.name == 'content_type':
+                kwargs['widget'] = GenericContentTypeSelect
+            return super(SomeModelAdmin, self).formfield_for_dbfield(db_field, **kwargs)
+
+If you decide on using `formfield_overrides` [you should be aware of its limitations with relation fields](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.formfield_overrides).
+
+This feature (and many more) was brought to you by [Jacob Magnusson](https://github.com/jmagnusson). Thank you Jacob!
 
 ## Screenshots
 

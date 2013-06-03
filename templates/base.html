@@ -68,12 +68,7 @@
                 </header>
                 {% include "_vcard.html" %}
                 <nav>
-
                     <div class="hidden-phone">{% include "_adv.html" %}</div>
-
-                    <div class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style hidden-phone">
-                        {% include "_addthis.html" %}
-                    </div>
                 </nav>
             </div>
             <div class="span9 content">
@@ -107,54 +102,50 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <!--<script src="{{ url_for('static', filename="bootstrap21/js/bootstrap.min.js") }}"></script>-->
     <script type="text/javascript" src="{{ url_for('static', filename="google-code-prettify/prettify.js") }}"></script>
     <script type="text/javascript">
         prettyPrint();
     </script>
-    <!--<script type="text/javascript">
-      (function() {
-        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-        po.src = 'https://apis.google.com/js/plusone.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-      })();
-    </script>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script src="{{ url_for('static', filename='js/jquery.sharrre-1.3.4.min.js')}}"></script>
     <script>
-    (function(d, t) {
-        var g = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-        g.src = '//hnbutton.appspot.com/static/hn.js';
-        s.parentNode.insertBefore(g, s);
-    }(document, 'script'));
-    </script>-->
-    <script type="text/javascript">
-        var addthis_config = {
-            url: '{% if config.DEBUG %}http://www.codingnot.es{% endif %}{% if page %}{{ url_for('page', path=page.path) }}{% else %}/{% endif %}'
-            data_track_clickback: true,
-            data_track_addressbar: true,
-            ui_click: true,
-            data_ga_property: "UA-33772592-1",
-            data_ga_social: true,
-        };
-    </script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-510231d6102565a5"></script>
-    <script type="text/javascript">
-        var GoSquared = {};
-        GoSquared.acct = "GSN-807511-U";
-        (function(w){
-            function gs(){
-                w._gstc_lt = +new Date;
-                var d = document, g = d.createElement("script");
-                g.type = "text/javascript";
-                g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
-                var s = d.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(g, s);
-            }
-            w.addEventListener ?
-                w.addEventListener("load", gs, false) :
-                w.attachEvent("onload", gs);
-        })(window);
+    $('.twitter').sharrre({
+      share: {
+        twitter: true
+      },
+      template: '<a class="box" href="#"><div class="count" href="#">{total}</div><div class="share"><span></span>Tweet</div></a>',
+      enableHover: false,
+      enableTracking: true,
+      buttons: { twitter: {via: 'codingnot.es'}},
+      click: function(api, options){
+        api.simulateClick();
+        api.openPopup('twitter');
+      }
+    });
+    $('.facebook').sharrre({
+      share: {
+        facebook: true
+      },
+      template: '<a class="box" href="#"><div class="count" href="#">{total}</div><div class="share"><span></span>Like</div></a>',
+      enableHover: false,
+      enableTracking: true,
+      click: function(api, options){
+        api.simulateClick();
+        api.openPopup('facebook');
+      }
+    });
+    $('.googleplus').sharrre({
+      share: {
+        googlePlus: true
+      },
+      urlCurl: '{{ url_for("gplus_share_count")}}',
+      template: '<a class="box" href="#"><div class="count" href="#">{total}</div><div class="share">+1</div></a>',
+      enableHover: false,
+      enableTracking: true,
+      click: function(api, options){
+        api.simulateClick();
+        api.openPopup('googlePlus');
+      }
+    });
     </script>
     {% block extrajs %}{% endblock extrajs %}
 

@@ -5,12 +5,16 @@
 {% block content %}
 <article class="page">
     <header class="row-fluid">
+        <div class="hidden-phone">
+            {% from "_sharrre.html" import share_url %}
+            {{ share_url("%s%s" % ("http://www.codingnot.es" if config.DEBUG else "",  url_for("page", path=page.path)), page.meta.title) }}
+        </div>
         <h1>
             {{ page.title }}
         </h1>
         <p>
             {{ page.abstract|safe }}
-        </p>
+        </p>            
     </header>
     <nav class="row-fluid">
         <a href="{{ url_for("page", path=page.path) }}#disqus_thread">loading comments</a>
@@ -47,10 +51,12 @@
     </div>
 </nav>
 
-{# <aside class="row-fluid spacedbox">
+{#
+<aside class="row-fluid spacedbox">
     {% include "_social.html" %}
 </aside>
- #}
+#}
+
  <aside class="row-fluid spacedbox">
     <h2 id="comments">Get involved</h2>
     <div id="disqus_thread"></div>
