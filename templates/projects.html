@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block metatitle %}Riccardo Forina's résumé{% endblock metatitle %}
+
+{% block metadescription %}Front-end and back-end developer with strong operations management skill{% endblock metadescription %}
+
+{% block content %}
+<main>
+  <article>
+    <header>
+      <div class="wrapper">
+        <h1>My projects</h1>
+        <ul class="nav nav--fit main-nav">
+          <li class="flyout">
+            <i class="icon-list"></i> Quick navigation
+            <div class="flyout__content">
+              <ul class="nav quick-nav">
+                <li><a href="#"><i class="icon-tag-fill"></i> Top</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="text--right"><a href="{{ url_for('index')}}"><i class="icon-home"></i></a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="wrapper">
+      <h2><a href="/bootstrap-your-django-admin-in-3-minutes/">django-admin-bootstrapped</a></h2>
+      <p>A Django admin theme using Twitter Bootstrap. It doesn't need any kind of modification on your side, just add it to the installed apps.</p>
+      <a href="/bootstrap-your-django-admin-in-3-minutes/">Looking for contributors!</a></p>
+      <iframe src="http://ghbtns.com/github-btn.html?user=riccardo-forina&amp;repo=django-admin-bootstrapped&amp;type=watch&amp;count=true&amp;size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+
+      <h2><a href="/status/">Status.js</a></h2>
+      <p>Check your website for broken links with jQuery.<br>
+      See <a href="/check-your-website-for-broken-links-with-jquery/">how status.js works</a> or check the <a href="/status/">live demo</a>.</p>
+      <iframe src="http://ghbtns.com/github-btn.html?user=riccardo-forina&amp;repo=status-jquery-crawler&amp;type=watch&amp;count=true&amp;size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+    </div>
+  </article>
+
+  <aside class="comments">
+    <a class="qna" name="comments"></a>
+    <div class="wrapper">
+      <h2>Get involved</h2>
+      <p>Feel free to leave your comment, but please remember that these thoughts and opinions are my own, and not that of my employer.</p>
+      <div id="disqus_thread"></div>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+  </aside>
+</main>
+{% endblock content %}

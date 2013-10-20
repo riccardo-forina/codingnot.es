@@ -7,11 +7,9 @@ abstract: Broken links happens, but it's something you can check easily without 
 
 Writing my notes I make mistakes. I know, my English has room for improvement, but I do other mistakes like broken links, duplicate titles, empty meta descriptions...
 
-A wise person would tell me: "hey dumbass, just download [Xenu's Link Sleuth](http://home.snafu.de/tilman/xenulink.html) and let it handle the dirty job!". You are completely right. But I'm a OSX user, as you [can see by my notes](/tag/osx), so Xenu is out of question. And I want something easier, maybe integrated in my website.
+A wise person would tell me: "hey dumbass, just download [Xenu's Link Sleuth](http://home.snafu.de/tilman/xenulink.html) and let it handle the dirty job!". You are completely right. But I'm a OSX user, as you [can see by my notes](/), so Xenu is out of question. And I want something easier, maybe integrated in my website.
 
 So I wrote Status.js!
-
-<hr>
 
 ## Updates
 
@@ -20,8 +18,6 @@ So I wrote Status.js!
 A table is useful, but sometimes something more graphic is better. That's why I implemented the Javascript InfoVis Toolkit ([Jit](https://github.com/philogb/jit)) in Status.js to plot the website as a graph you can interact with.
 
 Since I was coding, I wrote a dead easy sitemap.xml generator that makes use of the crawler work. Nothing fancy, but if you can't generate a sitemap in a more correct way it can be useful.
-
-<hr>
 
 # Status.js, a jQuery crawler
 

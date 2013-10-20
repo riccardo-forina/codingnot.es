@@ -1,7 +1,0 @@
-<h1>Browse by tag</h1>
-
-<nav>
-    {% for tag, count in tags.items() %}
-        <a href="{{ url_for("tag", tag=tag) }}" rel="nofollow">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-    {% endfor %}
-</nav>

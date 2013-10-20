@@ -5,85 +5,105 @@
 {% block metadescription %}Front-end and back-end developer with strong operations management skill{% endblock metadescription %}
 
 {% block content %}
-<article>
-    <header class="row-fluid">
-        <div class="span10">
-            <h1>Riccardo Forina</h1>
-        </div>
-        <p class="span2">
-            Milan, Italy<br>
-            +393409090319<br>
-            r.forina@gmail.com
-        </p>
+<main>
+  <article>
+    <header>
+      <div class="wrapper">
+        <h1>About me</h1>
+        <ul class="nav nav--fit main-nav">
+          <li class="flyout">
+            <i class="icon-list"></i> Quick navigation
+            <div class="flyout__content">
+              <ul class="nav quick-nav">
+                <li><a href="#"><i class="icon-tag-fill"></i> Top</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="text--right"><a href="{{ url_for('index')}}"><i class="icon-home"></i></a></li>
+        </ul>
+      </div>
     </header>
+    <div class="wrapper">
+      <div class="vcard">
+        <p>Hi! My name is <a rel="author" class="url fn" href="https://plus.google.com/118111415240450159923/posts">Riccardo Forina</a>.</p>
 
-    <div class="text">
-        <p class="lead">
-            I' m a front-end developer and back-end developer with strong operations management skill.<br>
-            In my free time I work on open source projects and write technical articles on my website.
-        </p>
+        <p>I'm a front-end and back-end developer with strong operations management skill. If you want to contact me, you can do so through <a class="Riccardo Forina LinkedIn" href="http://www.linkedin.com/in/riccardoforina">LinkedIn</a>, <a title="Riccardo Forina Google+" href="https://plus.google.com/118111415240450159923/about">Google+</a> or <a title="Riccardo Forina twitter" href="http://twitter.com/riccardoforina">Twitter</a>.</p>
+      </div>
 
-        <h2>Technical Skills</h2>
+      <h2><a href="/resume/">Résumé</a></h2>
+      <p>
+          I' m a front-end developer and back-end developer with strong operations management skill.<br>
+          In my free time I work on open source projects and write technical articles on my website.
+      </p>
 
-        <p>javascript, python, django, css, less, jquery, backbone.js, angular.js, nginx, memcached, mysql</p>
+      <h3>Technical Skills</h3>
 
-        <h2>Experience</h2>
+      <p>javascript, python, django, css, less, jquery, backbone.js, angular.js, nginx, memcached, mysql</p>
 
-        <h3>Web Architect – Prodigys Technology <small>January 2010 - Current</small></h3>
-        <dl>
-            <dt>Plug &amp; Play social plugins (like Facebook's)</dt>
-            <dd>Hight traffic (more than 500k visitors/day) plugins, served by a single Amazon EC2 machine with less than 2Gb RAM.</dd>
-            <dt>SSO proxy</dt>
-            <dd>A wrapper around XML based web services to add web 2.0 capabilities (cross-domain, json). Optimized to reduce latency using non blocking sockets to fetch more data at once. High traffic (> 1Mln request/day), but still runs on a single EC2 machine.</dd>
-            <dt>Vodafone Lab mobile website</dt>
-            <dd>A backbone.js powered mobile version of the Vodafone Lab website (http://lab.vodafone.it/m/)</dd>
-            <dt>Frontend consultant</dt>
-            <dd>Provided technical support and reports to optimize the loading speed of Vodafone Italy web portal.</dd>
-            <dt>Team leader</dt>
-            <dd>Introduced GIT and django in the job workflow and script-based deploys.</dd>
-        </dl>
+      <h3>Experience</h3>
 
-        <h3>Web programmer – Neo Network <small>September 2009 - January 2010</small></h3>
-        <dl>
-            <dt>Website frontend &amp; backend</dt>
-            <dd>Asp.NET MVC powered; high traffic; custom user registration.</dd>
-            <dt>Website porting from .NET to Django</dt>
-            <dd>Rework of the paneangeli.it website, based on a proprietary .NET CMS, adding progressive enhancement, Salesforce integration and SEO optimization (from a single page architecture to hundreds of indexable pages).</dd>
-        </dl>
+      <h4>Senior Frontend Web Developer @ Lumata</h4>
+      <p>In Lumata I am involved in the task of renewing the whole UI infrastructure of one of Lumata’s main products, moving from a web application built with GWT to a web application built with Angular.js. To ease the development I have also defined a Maven-like process built on top of Grunt, Yeoman and Node.js.</p>
 
-        <h3>Analyst Programmer – IMILLE Srl <small>February 2008 - September 2009</small></h3>
-        <dl>
-            <dt>Custom CMS</dt>
-            <dd>Worked on the award winning website pandistelle.it, built with python (django); integration with a SOAP based SSO (helped to test and enhance it).</dd>
-            <dt>Various website</dt>
-            <dd>PHP based</dd>
-        </dl>
+      <h4>Web Architect – Prodigys Technology <small>January 2010 - June 2013</small></h4>
+      <dl>
+          <dt>Plug &amp; Play social plugins (like Facebook's)</dt>
+          <dd>Hight traffic (more than 500k visitors/day) plugins, served by a single Amazon EC2 machine with less than 2Gb RAM.</dd>
+          <dt>SSO proxy</dt>
+          <dd>A wrapper around XML based web services to add web 2.0 capabilities (cross-domain, json). Optimized to reduce latency using non blocking sockets to fetch more data at once. High traffic (&gt; 1Mln request/day), but still runs on a single EC2 machine.</dd>
+          <dt>Vodafone Lab mobile website</dt>
+          <dd>A backbone.js powered mobile version of the Vodafone Lab website (http://lab.vodafone.it/m/)</dd>
+          <dt>Frontend consultant</dt>
+          <dd>Provided technical support and reports to optimize the loading speed of Vodafone Italy web portal.</dd>
+          <dt>Team leader</dt>
+          <dd>Introduced GIT and django in the job workflow and script-based deploys.</dd>
+      </dl>
 
-        <h2>Education</h2>
-        <dl>
-            <dt>Attended Computer Science</dt>
-            <dd>Not completed for career opportunities – University of Turin 2001 - 2003</dd>
-            <dt>High school</dt>
-            <dd>Informatics and telecommunication - ITIS Amedeo Avogadro 1995 - 2001</dd>
-        </dl>
+      <h4>Web programmer – Neo Network <small>September 2009 - January 2010</small></h4>
+      <dl>
+          <dt>Website frontend &amp; backend</dt>
+          <dd>Asp.NET MVC powered; high traffic; custom user registration.</dd>
+          <dt>Website porting from .NET to Django</dt>
+          <dd>Rework of the paneangeli.it website, based on a proprietary .NET CMS, adding progressive enhancement, Salesforce integration and SEO optimization (from a single page architecture to hundreds of indexable pages).</dd>
+      </dl>
+
+      <h4>Analyst Programmer – IMILLE Srl <small>February 2008 - September 2009</small></h4>
+      <dl>
+          <dt>Custom CMS</dt>
+          <dd>Worked on the award winning website pandistelle.it, built with python (django); integration with a SOAP based SSO (helped to test and enhance it).</dd>
+          <dt>Various website</dt>
+          <dd>PHP based</dd>
+      </dl>
+
+      <h3>Education</h3>
+      <dl>
+          <dt>Attended Computer Science</dt>
+          <dd>Not completed for career opportunities – University of Turin 2001 - 2003</dd>
+          <dt>High school</dt>
+          <dd>Informatics and telecommunication - ITIS Amedeo Avogadro 1995 - 2001</dd>
+      </dl>
 
 
-        <h2>Projects & Interests</h2>
+      <h3>Projects &amp; Interests</h3>
 
-        <dl>
-            <dt>django-admin-bootstrapped - https://github.com/riccardo-forina/django-admin-bootstrapped</dt>
-            <dd>A Django application to provide bootstrap theming to the admin interface</dd>
-            <dt>status-jquery-crawler – https://github.com/riccardo-forina/status-jquery-crawler</dt>
-            <dd>A plug&play javascript application to check for broken links in a website.</dd>
-        </dl>
+      <dl>
+          <dt>django-admin-bootstrapped - https://github.com/riccardo-forina/django-admin-bootstrapped</dt>
+          <dd>A Django application to provide bootstrap theming to the admin interface</dd>
+          <dt>status-jquery-crawler – https://github.com/riccardo-forina/status-jquery-crawler</dt>
+          <dd>A plug&amp;play javascript application to check for broken links in a website.</dd>
+      </dl>
     </div>
+  </article>
 
-    <footer>
-        <a href="{{ url_for('static', filename='Riccardo Forina\'s Resume.pdf' )}}">Download as PDF</a>
-    </footer>
-</article>
+  <aside class="comments">
+    <a class="qna" name="comments"></a>
+    <div class="wrapper">
+      <h2>Get involved</h2>
+      <p>Feel free to leave your comment, but please remember that these thoughts and opinions are my own, and not that of my employer.</p>
+      <div id="disqus_thread"></div>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+  </aside>
+</main>
 {% endblock content %}
-
-{% block sidebar %}
-{% include "_latest.html" %}
-{% endblock sidebar %}

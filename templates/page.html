@@ -3,88 +3,41 @@
 {% block metadescription %}{{ page.abstract|striptags }}{% endblock metadescription %}
 
 {% block content %}
-<article class="page">
-    <header class="row-fluid">
-        <div class="hidden-phone">
-            {% from "_sharrre.html" import share_url %}
-            {{ share_url("http://www.codingnot.es%s" % url_for("page", path=page.path), page.meta.title) }}
-        </div>
-        <h1>
-            {{ page.title }}
-        </h1>
-        <p>
-            {{ page.abstract|safe }}
-        </p>            
+<main>
+  <article>
+    <header>
+      <div class="wrapper">
+        <h1>{{ page.title }}</h1>
+        <ul class="nav nav--fit main-nav">
+          <li class="flyout">
+            <i class="icon-list"></i> Quick navigation
+            <div class="flyout__content">
+              <ul class="nav quick-nav">
+                <li><a href="#"><i class="icon-tag-fill"></i> Top</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><i class="icon-chat-alt-fill" style="display:inline-block;"></i> <a href="#disqus_thread"  style="display:inline-block;">Loading comments...</a></li>
+          <li><a href="#comments"><i class="icon-pen-alt-fill"></i> Add a comment</a></li>
+          <li class="text--right"><a href="{{ url_for('index')}}"><i class="icon-home"></i></a></li>
+        </ul>
+      </div>
     </header>
-    <nav class="row-fluid">
-        <a href="{{ url_for("page", path=page.path) }}#disqus_thread">loading comments</a>
-    </nav>
-    <div class="row-fluid text">
-        {{ page.html|safe }}
+    <div class="wrapper">
+      <p>{{ page.abstract|safe }}</p>
+      {{ page.html|safe }}
     </div>
-    <footer class="row-fluid">
-        <date title="{{ page.date.isoformat() }}" class="span6">
-            <span>{{ page.date.strftime('%d') }}</span>
-            {{ page.date.strftime('%B') }}
-        </date>
-        <div class="span6 tags">
-            Posted under 
-            {% for page_tag in page.tags %}
-            <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-        </div>
-    </footer>
-</article>
+  </article>
+
+  <aside class="comments">
+    <a class="qna" name="comments"></a>
+    <div class="wrapper">
+      <h2>Get involved</h2>
+      <p>Feel free to leave your comment, but please remember that these thoughts and opinions are my own, and not that of my employer.</p>
+      <div id="disqus_thread"></div>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+  </aside>
+</main>
 {% endblock content %}
-
-{% block aftercontent %}
-<nav class="row-fluid spacedbox divider">
-    <div class="pull-left">
-        {% if previous_page %}
-        <a href="{{ url_for("page", path=previous_page.path) }}" rel="nofollow" title="{{ previous_page.title }}">&larr; older posts</a></h3>
-        {% endif %}
-    </div>
-    <div class="pull-right">
-        {% if next_page %}
-        <a href="{{ url_for("page", path=next_page.path) }}" rel="nofollow" title="{{ next_page.title }}">newer posts &rarr;</a></h3>
-        {% endif %}
-    </div>
-</nav>
-
-{#
-<aside class="row-fluid spacedbox">
-    {% include "_social.html" %}
-</aside>
-#}
-
- <aside class="row-fluid spacedbox">
-    <h2 id="comments">Get involved</h2>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'notesriccardoforina'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-
-        (function () {
-            var s = document.createElement('script'); s.async = true;
-            s.type = 'text/javascript';
-            s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</aside>
-{% endblock aftercontent %}
-
-
-
-{% block sidebar %}
-{% include "_latest.html" %}
-{% endblock sidebar%}

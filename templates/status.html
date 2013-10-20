@@ -1,19 +1,42 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% block metatitle %}Status.js, jQuery broken links finder - {{ super() }}{% endblock metatitle %}
+    <title>Status.js, jQuery broken links finder</title>
 
-{% block metadescription %}Check your website for broken links and bad SEO titles and descriptions.{% endblock metadescription %}
+    <!-- Bootstrap core CSS -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
 
-{% block content %}
-<article style="position:relative;">
-    <header class="row-fluid">
+    <style type="text/css">
+    #spatial {
+        height: 600px;
+        overflow: hidden;
+        /*background: #000;*/
+    }
+    #sitemap textarea {
+        height: 600px;
+        width: 100%;
+    }
+    </style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <header class="row-fluid">
         <h1>Status.js</h1>
     </header>
     <div class="text">
         <p>Check your website for broken links with jQuery. No server side requirements!</p>
         <p>See <a href="/check-your-website-for-broken-links-with-jquery/">how status.js works</a>.</p>
-
-        {# {% include "_social.html" %} #}
 
         <h2>Current website status</h2>
 
@@ -107,24 +130,16 @@
         </div>
     </div>
     <a href="https://github.com/riccardo-forina/status-jquery-crawler"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
-</article>
-{% endblock content %}
 
-{% block extrahead %}
-    <style type="text/css">
-    #spatial {
-        height: 600px;
-        overflow: hidden;
-        /*background: #000;*/
-    }
-    #sitemap textarea {
-        height: 600px;
-        width: 100%;
-    }
-    </style>
-{% endblock extrahead %}
+    </div> <!-- /container -->
 
-{% block extrajs %}
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='status/underscore.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='status/backbone.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='status/jsuri-1.1.1.min.js') }}"></script>
@@ -171,5 +186,6 @@
         <td class="linksOut"></td>
     </script>
 
+  </body>
+</html>
 
-{% endblock extrajs %}
