@@ -23,7 +23,7 @@
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
  */
-$use-grids:         true;
+$use-grids:         false;
 $use-flexbox:       false;
 $use-columns:       false;
 $use-nav:           true;
@@ -66,6 +66,8 @@ $heading-font-family: "Ubuntu Condensed", sans-serif;
 
 
 $h1-size: 64px;
+
+$responsive: false;
 
 /*------------------------------------*\
     $CUSTOM
