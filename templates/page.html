@@ -6,8 +6,9 @@
 <main>
   <article>
     <header>
-      <div class="wrapper">
         <h1>{{ page.title }}</h1>
+        <p>{{ page.abstract|safe }}</p>
+      <div class="wrapper">
         <ul class="nav nav--fit main-nav">
           <li class="flyout">
             <i class="icon-list"></i> Quick navigation
@@ -24,7 +25,14 @@
       </div>
     </header>
     <div class="wrapper">
-      <p>{{ page.abstract|safe }}</p>
+      <p><small>
+        Posted <abbr class="published" title="{{ page.date.isoformat() }}">{{ page.date.strftime('%B %dth, %Y') }}</abbr>
+        {% if page.tags|length %}in
+          {% for page_tag in page.tags %}
+          <a class="badge" href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>{% if not loop.last %}, {% endif %}
+          {% endfor %}
+        {% endif %}
+      </small></p>
       {{ page.html|safe }}
     </div>
   </article>

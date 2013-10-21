@@ -19,7 +19,7 @@ utc = pytz.utc
 
 HOSTNAME = socket.gethostname()
 DEBUG = False
-if '.local' in HOSTNAME:
+if __name__ == '__main__':
     DEBUG = True
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))

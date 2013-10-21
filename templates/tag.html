@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block metatitle %}Notes tagged {{ tag }} - {{ super() }}{% endblock metatitle %}
+
+{% block extrahead %}
+    <meta name="robots" content="noindex, follow">
+{% endblock extrahead %}
+
+{% block content %}
+  <header>
+    <div class="wrapper">
+      <h1>Notes tagged <em>{{ tag }}</em></h1>
+      <ul class="nav nav--fit main-nav">
+        <li class="text--right"><a href="{{ url_for('index')}}"><i class="icon-home"></i></a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+  {% with pages=pages  %}
+      {% include "_list.html" %}
+  {% endwith %}
+  </main>
+{% endblock content %}

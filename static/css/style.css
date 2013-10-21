@@ -47,7 +47,7 @@
 /*------------------------------------*\
     INUIT.CSS
 \*------------------------------------*/
-/**
+/*!*
  *
  * inuitcss.com -- @inuitcss -- @csswizardry
  *
@@ -383,7 +383,7 @@
  *
  * We work out your end points for you:
  */
-/* normalize.css v2.1.0 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -2103,7 +2103,7 @@ label,
  * Text alignment
  */
 .text--left {
-  text-align: left !important;
+  text-align: left  !important;
 }
 
 .text--center {
@@ -2437,6 +2437,7 @@ header {
   border-bottom: 3px solid #030303;
   background: #b6d37f;
   font-size: 120%;
+  text-align: center;
 }
 header h1 {
   color: #27292c;

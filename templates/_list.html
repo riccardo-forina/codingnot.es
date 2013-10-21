@@ -4,6 +4,14 @@
     <h2><a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a></h2>
     <p>{{ page.abstract |safe }}</p>
     <p><a href="{{ url_for("page", path=page.path) }}">Continue reading&hellip;</a></p>
+    <p><small>
+      Posted <abbr class="published" title="{{ page.date.isoformat() }}">{{ page.date.strftime('%B %dth, %Y') }}</abbr>
+      {% if page.tags|length %}in
+        {% for page_tag in page.tags %}
+        <a class="badge" href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+      {% endif %}
+    </small></p>
   </div>
 </article>
 {% else %}
