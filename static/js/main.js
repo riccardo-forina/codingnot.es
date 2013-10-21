@@ -1,3 +1,7 @@
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'notesriccardoforina'; // required: replace example with your forum shortname
+// var disqus_url = '';
+
 (function($) {
   $(document).ready(function() {
     var qn = $('.quick-nav');
@@ -19,10 +23,6 @@
       }
     });
   });
-
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-  var disqus_shortname = 'notesriccardoforina'; // required: replace example with your forum shortname
-  // var disqus_url = '';
 
   /* * * DON'T EDIT BELOW THIS LINE * * */
   (function() {
