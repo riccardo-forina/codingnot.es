@@ -5,25 +5,30 @@
 {% block content %}
 <main>
   <article>
-    <header>
-        <h1>{{ page.title }}</h1>
+    <div class="top-nav">
+      <header>
+        <h1>
+          {{ page.title }}
+        </h1>
         <p>{{ page.abstract|safe }}</p>
-      <div class="wrapper">
-        <ul class="nav nav--fit main-nav">
-          <li class="flyout">
-            <i class="icon-list"></i> Quick navigation
-            <div class="flyout__content">
-              <ul class="nav quick-nav">
-                <li><a href="#"><i class="icon-tag-fill"></i> Top</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><i class="icon-chat-alt-fill" style="display:inline-block;"></i> <a href="#disqus_thread"  style="display:inline-block;">Loading comments...</a></li>
-          <li><a href="#comments"><i class="icon-pen-alt-fill"></i> Add a comment</a></li>
-          <li class="text--right"><a href="{{ url_for('index')}}"><i class="icon-home"></i></a></li>
-        </ul>
-      </div>
-    </header>
+        <div class="wrapper">
+          <ul class="nav nav--fit main-nav">
+            <li class="flyout one-third">
+              <i class="icon-list"></i> Quick navigation
+              <div class="flyout__content">
+                <ul class="nav quick-nav">
+                  <li><a href="#"><i class="icon-tag-fill"></i> Top</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="text--center one-third"><i class="icon-chat-alt-fill" style="display:inline-block;"></i> <a href="#disqus_thread"  style="display:inline-block;">Loading comments...</a></li>
+            <li class="text--right one-third"><a href="http://www.twitter.com/share?url={{ url_for("page", path=page.path, _external=True) | urlencode }}"><i class="icon-twitter"></i> Share</a></li>
+          </ul>
+        </div>
+      </header>
+      {% include "_commonnav.html" %}
+    </div>
+    
     <div class="wrapper">
       <p><small>
         Posted <abbr class="published" title="{{ page.date.isoformat() }}">{{ page.date.strftime('%B %dth, %Y') }}</abbr>

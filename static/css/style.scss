@@ -77,13 +77,18 @@ header {
   border-bottom: 3px solid darken($bg-color, 15%);
   background: $heading-color;
   font-size: 120%;
+  .wrapper {
+    padding: 0;
+  }
   h1 {
     color: $bg-color;
     text-align: center;
-    margin-bottom: 0;
+    padding: 0 0 $half-spacing-unit 0 ;
+    margin: 0;
   }
   p {
-    margin-top: $half-spacing-unit;
+    padding: 0 0 $half-spacing-unit 0;
+    margin: 0;
     text-align: center;
   }
   a {
@@ -97,6 +102,7 @@ header {
   .main-nav {
     position: relative;
     margin: 0;
+    padding: $half-spacing-unit 0;
     li {
       cursor: pointer;
     }
@@ -140,13 +146,15 @@ footer {
 
 @include media-query(lap-and-up) {
   .scrolling {
-    header {
+    .top-nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
+      z-index: 100;
 
-      h1, p {
+      h1,
+      p {
         display: none;
       }
     }
@@ -159,6 +167,20 @@ footer {
 .comments {
   background: $comments-color;
   border-top: 1px solid darken($comments-color, 15%);
+}
+
+.aside-nav {
+  background: $aside-nav-color;
+  border-bottom: 3px solid darken($comments-color, 15%);
+  .wrapper {
+    padding: $half-spacing-unit/2 0;
+  }
+  .nav {
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
 }
 
 .qna {

@@ -7,22 +7,15 @@
 {% block content %}
 <main>
   <article>
-    <header>
-      <div class="wrapper">
-        <h1>About me</h1>
-        <ul class="nav nav--fit main-nav">
-          <li class="flyout">
-            <i class="icon-list"></i> Quick navigation
-            <div class="flyout__content">
-              <ul class="nav quick-nav">
-                <li><a href="#"><i class="icon-tag-fill"></i> Top</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="text--right"><a href="{{ url_for('index')}}"><i class="icon-home"></i></a></li>
-        </ul>
-      </div>
-    </header>
+    <div class="top-nav">
+      <header>
+        <div class="wrapper">
+          <h1>About me</h1>
+          <p><small>Riccardo Forina, web developer</small></p>
+        </div>
+      </header>
+      {% include "_commonnav.html" %}
+    </div>
     <div class="wrapper">
       <div class="vcard">
         <p>Hi! My name is <a rel="author" class="url fn" href="https://plus.google.com/118111415240450159923/posts">Riccardo Forina</a>.</p>
