@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block metadescription %}{{ page.abstract|striptags }}{% endblock metadescription %}
+{% block metadescription %}{{ page.title }}, {{ page.abstract|striptags }}{% endblock metadescription %}
 
 {% block content %}
 <main>
