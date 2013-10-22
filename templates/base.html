@@ -13,12 +13,12 @@
 
     <link href="{{ url_for('site_feed') }}" rel="alternate" title="Coding notes by Riccardo Forina" type="application/atom+xml">
 
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ url_for('static', filename="css/icons.css") }}">
     <link rel="stylesheet" href="{{ url_for('static', filename="css/style.min.css") }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename="icons/favicon.ico") }}">
-    
+
     {% if not config.DEBUG %}
     <script type="text/javascript">
 
@@ -38,16 +38,16 @@
 <body>
 
   {% block content %}
-    
+
   {% endblock %}
 
   <footer>
     <p class="wrapper">Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</p>
   </footer>
 
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=desert"></script>
-  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=desert"></script>
+  <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="{{ url_for('static', filename="js/main.js") }}"></script>
 </body>
 </html>
