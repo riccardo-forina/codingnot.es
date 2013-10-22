@@ -18,7 +18,7 @@
               </ul>
             </div>
           </li>
-          <li><i class="icon-chat-alt-fill" style="display:inline-block;"></i> <a href="{{ url_for("page", path=page.path) }}#disqus_thread"  style="display:inline-block;">Loading comments...</a></li>
+          <li><i class="icon-chat-alt-fill" style="display:inline-block;"></i> <a href="#disqus_thread"  style="display:inline-block;">Loading comments...</a></li>
           <li><a href="#comments"><i class="icon-pen-alt-fill"></i> Add a comment</a></li>
           <li class="text--right"><a href="{{ url_for('index')}}"><i class="icon-home"></i></a></li>
         </ul>
@@ -48,4 +48,7 @@
     </div>
   </aside>
 </main>
+<script>
+  var disqus_url = '{{ url_for("page", path=page.path, _external=True) }}';
+</script>
 {% endblock content %}

@@ -19,9 +19,6 @@ utc = pytz.utc
 
 HOSTNAME = socket.gethostname()
 DEBUG = False
-if __name__ == '__main__':
-    DEBUG = True
-
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
@@ -29,6 +26,9 @@ FLATPAGES_EXTENSION = '.md'
 LESS_LINE_NUMBERS = 'mediaquery'
 FREEZER_DESTINATION = os.path.join(SITE_ROOT, '..', '..', 'build')
 FLATPAGES_ROOT = os.path.join(SITE_ROOT, '..', '..', 'pages')
+
+if __name__ == '__main__':
+    DEBUG = True
 
 app = Flask(
     import_name='codingnotes',
