@@ -22,13 +22,13 @@
               </div>
             </li>
             <li class="text--center one-third"><i class="icon-chat-alt-fill" style="display:inline-block;"></i> <a href="#disqus_thread"  style="display:inline-block;">Loading comments...</a></li>
-            <li class="text--right one-third"><a href="http://www.twitter.com/share?url={{ url_for("page", path=page.path, _external=True) | urlencode }}"><i class="icon-twitter"></i> Share</a></li>
+            <li class="text--right one-third"><a href="http://www.twitter.com/share?url={{ url_for("page", path=page.path, _external=True) }}"><i class="icon-twitter"></i> Share</a></li>
           </ul>
         </div>
       </header>
       {% include "_commonnav.html" %}
     </div>
-    
+
     <div class="wrapper">
       <p><small>
         Posted <abbr class="published" title="{{ page.date.isoformat() }}">{{ page.date.strftime('%B %dth, %Y') }}</abbr>

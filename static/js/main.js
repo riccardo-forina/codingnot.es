@@ -5,7 +5,7 @@ var disqus_shortname = 'notesriccardoforina'; // required: replace example with 
 (function($) {
   $(document).ready(function() {
     var qn = $('.quick-nav');
-    $('article h2').each(function(idx) {
+    $('article h2:not(.no-anchor)').each(function(idx) {
       var h2 = $(this),
           id = h2.text().toLowerCase()
                         .replace(/ /g,'-')
