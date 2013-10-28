@@ -19,7 +19,7 @@
     {% if config.DEBUG %}
     <link rel="stylesheet" href="{{ url_for('static', filename="css/style.css") }}">
     {% else %}
-    <link rel="stylesheet" href="{{ url_for('static', filename="css/style.min.css") }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/style.min.css") }}?20131028">
     {% endif %}
     <link rel="shortcut icon" href="{{ url_for('static', filename="icons/favicon.ico") }}">
 
@@ -52,6 +52,6 @@
   <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=desert"></script>
   <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="{{ url_for('static', filename="js/main.js") }}"></script>
+  <script src="{{ url_for('static', filename="js/main.js") }}?20131028"></script>
 </body>
 </html>
