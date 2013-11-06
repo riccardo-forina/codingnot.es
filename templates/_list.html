@@ -1,17 +1,21 @@
 {% for page in pages %}
 <article>
   <div class="wrapper">
-    <h2><a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a></h2>
-    <p>{{ page.abstract |safe }}</p>
-    <p><a href="{{ url_for("page", path=page.path) }}">Continue reading&hellip;</a></p>
-    <p><small>
+    <h2 class="no-anchor">
+      <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
+      <small><a href="{{ url_for("page", path=page.path) }}#disqus_thread"></a></small>
+    </h2>
+    <p>{{ page.abstract |safe }} <br><small>
       Posted <abbr class="published" title="{{ page.date.isoformat() }}">{{ page.date.strftime('%B %dth, %Y') }}</abbr>
       {% if page.tags|length %}in
         {% for page_tag in page.tags %}
-        <a class="badge" href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>{% if not loop.last %}, {% endif %}
+        <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>{% if not loop.last %}, {% endif %}
         {% endfor %}
       {% endif %}
     </small></p>
+    <p>
+      <a href="{{ url_for("page", path=page.path) }}" class="btn btn--primary">Continue reading&hellip;</a>
+    </p>
   </div>
 </article>
 {% else %}

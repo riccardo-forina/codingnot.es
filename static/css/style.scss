@@ -45,6 +45,18 @@ html {
 
 h2 {
   border-bottom: 2px solid $heading-color;
+  position: relative;
+
+  &.no-anchor {
+    padding-right: 120px;
+  }
+
+  small {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 70%;
+  }
 }
 
 a {
@@ -195,12 +207,19 @@ footer {
   i {
     position: relative;
     bottom: -40px;
+    z-index: 5;
   }
 }
 
-pre {
+pre,
+blockquote {
   background: rgba(0, 0, 0, 0.1) !important;
   padding: $half-spacing-unit;
+}
+
+blockquote {
+  text-indent: 0;
+  font-style: italic;
 }
 
 @include media-query(palm) {
@@ -212,5 +231,29 @@ pre {
   aside,
   footer {
     padding: $half-spacing-unit;
+  }
+}
+
+.btn {
+  line-height: 2.5em;
+}
+
+.btn--primary {
+  background: $link-color;
+  color: $bg-color;
+  transition: background 0.3s;
+  &:hover {
+    color: $bg-color;
+    background: lighten($link-color, 10%);
+  }
+}
+
+.btn--secondary {
+  background: $heading-color;
+  color: $bg-color;
+  transition: background 0.3s;
+  &:hover {
+    color: $bg-color;
+    background: darken($heading-color, 5%);
   }
 }

@@ -42,7 +42,7 @@ $use-flyout:        true;
 $use-arrows:        false;
 $use-sprite:        false;
 $use-icon-text:     false;
-$use-beautons:      false;
+$use-beautons:      true;
 $use-lozenges:      false;
 $use-rules:         false;
 $use-stats:         false;
@@ -68,6 +68,8 @@ $heading-font-family: "Ubuntu Condensed", sans-serif;
 $h1-size: 64px;
 
 $responsive: false;
+
+$brand-round: 0;
 
 /*------------------------------------*\
     $CUSTOM
