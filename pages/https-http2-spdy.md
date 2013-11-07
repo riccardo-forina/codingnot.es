@@ -7,7 +7,7 @@ Today I was reading [Ilya Grigorik's presentation](https://docs.google.com/prese
 
 It's amazing. I mean, you can stop worring about sprites and concatenation and _plus_ everything is faster?
 
-<img src="http://www.reactiongifs.com/wp-content/uploads/2012/11/take-my-money.gif" alt="Shut up and take my money">
+<img src="//www.reactiongifs.com/wp-content/uploads/2012/11/take-my-money.gif" alt="Shut up and take my money">
 
 Unfortunately, the due date is somewhere in 2014. Enter SPDY.
 

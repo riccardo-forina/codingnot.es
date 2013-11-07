@@ -20,7 +20,7 @@ The [manpage](http://goaccess.prosoftcorp.com/man) lists the available parameter
 
 If you want to make it the default for every GoAccess run, edit (or create) a `~/.goaccessrc` file like this:
 
-<pre>
-date_format %d/%b/%Y
-log_format %^ %^ [%d:%^] %h %^ %^ %^ %^ "%^ %r %^" %s %^ %b %^ %^ %^ "%^" "%u" %^
-</pre>
+<?prettify?>
+
+    date_format %d/%b/%Y
+    log_format %^ %^ [%d:%^] %h %^ %^ %^ %^ "%^ %r %^" %s %^ %b %^ %^ %^ "%^" "%u" %^

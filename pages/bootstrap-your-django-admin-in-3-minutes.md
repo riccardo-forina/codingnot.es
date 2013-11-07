@@ -58,6 +58,8 @@ You can add drag&drop sorting capability to any inline with a couple of changes 
 
 First, add a `position` field in your model (and sort your model accordingly), for example:
 
+<?prettify?>
+
     class TestSortable(models.Model):
         that = models.ForeignKey(TestMe)
         position = models.PositiveSmallIntegerField("Position")
@@ -67,6 +69,8 @@ First, add a `position` field in your model (and sort your model accordingly), f
             ordering = ('position', )
 
 Then in your admin.py create a class to handle the inline using the `django_admin_bootstrapped.admin.models.SortableInline` mixin, like this:
+
+<?prettify?>
 
     from django_admin_bootstrapped.admin.models import SortableInline
     from models import TestSortable
@@ -94,6 +98,8 @@ DEFAULT_CONTENT_TYPE = 'application/xhtml+xml'
 
 All that needs to be done is change the admin widget with either formfield_overrides like this:
 
+<?prettify?>
+
     from django_admin_bootstrapped.widgets import GenericContentTypeSelect
 
     class SomeModelAdmin(admin.ModelAdmin):
@@ -102,6 +108,8 @@ All that needs to be done is change the admin widget with either formfield_overr
         }
 
 Or if you want to be more specific:
+
+<?prettify?>
 
     from django_admin_bootstrapped.widgets import GenericContentTypeSelect
 

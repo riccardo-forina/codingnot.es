@@ -13,9 +13,6 @@
 
     <link href="{{ url_for('site_feed') }}" rel="alternate" title="Coding notes by Riccardo Forina" type="application/atom+xml">
 
-    <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{{ url_for('static', filename="css/icons.css") }}">
     {% if config.DEBUG %}
     <link rel="stylesheet" href="{{ url_for('static', filename="css/style.css") }}">
     {% else %}
@@ -49,9 +46,12 @@
     <p class="wrapper">Authored by <a href="https://plus.google.com/u/0/+RiccardoForina?rel=author">Riccardo Forina</a> - Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</p>
   </footer>
 
-  <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=desert"></script>
-  <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="{{ url_for('static', filename="js/main.js") }}?20131028"></script>
+  {% if config.DEBUG %}
+  <script src="{{ url_for('static', filename="js/jquery.min.js") }}"></script>
+  <script src="{{ url_for('static', filename="js/waypoints.min.js") }}"></script>
+  <script src="{{ url_for('static', filename="js/main.js") }}"></script>
+  {% else %}
+  <script src="{{ url_for('static', filename="js/main.min.js") }}"></script>
+  {% endif %}
 </body>
 </html>
