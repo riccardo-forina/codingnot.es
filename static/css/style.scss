@@ -14,7 +14,6 @@
 /**
  * Setup
  */
-@import "icons.css";
 @import "vars";
 @import "inuit.css/inuit";
 
@@ -30,7 +29,7 @@
 
 
 @font-face {
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu WOFF';
     src: url('../fonts/ubuntu-bold-webfont.eot');
     src: url('../fonts/ubuntu-bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/ubuntu-bold-webfont.woff') format('woff'),
@@ -45,7 +44,7 @@
 
 
 @font-face {
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu WOFF';
     src: url('../fonts/ubuntu-bolditalic-webfont.eot');
     src: url('../fonts/ubuntu-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/ubuntu-bolditalic-webfont.woff') format('woff'),
@@ -60,7 +59,7 @@
 
 
 @font-face {
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu WOFF';
     src: url('../fonts/ubuntu-italic-webfont.eot');
     src: url('../fonts/ubuntu-italic-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/ubuntu-italic-webfont.woff') format('woff'),
@@ -75,7 +74,7 @@
 
 
 @font-face {
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu WOFF';
     src: url('../fonts/ubuntu-regular-webfont.eot');
     src: url('../fonts/ubuntu-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/ubuntu-regular-webfont.woff') format('woff'),
@@ -90,7 +89,7 @@
 
 
 @font-face {
-    font-family: 'Ubuntu Condensed';
+    font-family: 'Ubuntu Condensed WOFF';
     src: url('../fonts/ubuntucondensed-regular-webfont.eot');
     src: url('../fonts/ubuntucondensed-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/ubuntucondensed-regular-webfont.woff') format('woff'),

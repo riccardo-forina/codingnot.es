@@ -17,8 +17,11 @@ from werkzeug.contrib.atom import AtomFeed
 
 utc = pytz.utc
 
+if __name__ == '__main__':
+    DEBUG = False
+else:
+    DEBUG = False
 HOSTNAME = socket.gethostname()
-DEBUG = False
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
@@ -27,9 +30,6 @@ LESS_LINE_NUMBERS = 'mediaquery'
 FREEZER_DESTINATION = os.path.join(SITE_ROOT, '..', '..', 'build')
 FLATPAGES_ROOT = os.path.join(SITE_ROOT, '..', '..', 'pages')
 
-if __name__ == '__main__':
-    DEBUG = True
-
 app = Flask(
     import_name='codingnotes',
     static_folder=os.path.join(SITE_ROOT, '..', '..', 'static'),
@@ -37,11 +37,9 @@ app = Flask(
 )
 
 assets = Environment(app)
+assets.debug = DEBUG
 assets.manifest = False
 assets.cache = False
-if DEBUG:
-    assets.manifest = False
-    assets.cache = None
 freezer = Freezer(app)
 pages_on_disk = FlatPages(app)
 

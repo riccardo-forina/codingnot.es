@@ -13,11 +13,10 @@
 
     <link href="{{ url_for('site_feed') }}" rel="alternate" title="Coding notes by Riccardo Forina" type="application/atom+xml">
 
-    {% if config.DEBUG %}
-    <link rel="stylesheet" href="{{ url_for('static', filename="css/style.css") }}">
-    {% else %}
-    <link rel="stylesheet" href="{{ url_for('static', filename="css/style.min.css") }}?20131028">
-    {% endif %}
+    {% assets filters="scss,cssmin", output="build/main.css",
+          "css/style.scss" %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}">
+    {% endassets %}
     <link rel="shortcut icon" href="{{ url_for('static', filename="icons/favicon.ico") }}">
 
     {% if not config.DEBUG %}
@@ -46,12 +45,9 @@
     <p class="wrapper">Authored by <a href="https://plus.google.com/u/0/+RiccardoForina?rel=author">Riccardo Forina</a> - Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</p>
   </footer>
 
-  {% if config.DEBUG %}
-  <script src="{{ url_for('static', filename="js/jquery.min.js") }}"></script>
-  <script src="{{ url_for('static', filename="js/waypoints.min.js") }}"></script>
-  <script src="{{ url_for('static', filename="js/main.js") }}"></script>
-  {% else %}
-  <script src="{{ url_for('static', filename="js/main.min.js") }}"></script>
-  {% endif %}
+  {% assets filters="jsmin", output="build/main.min.js",
+          "js/jquery.min.js", "js/waypoints.min.js", "js/main.js" %}
+    <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+  {% endassets %}
 </body>
 </html>
