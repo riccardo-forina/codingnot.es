@@ -7,6 +7,7 @@ Do you want Bootstrap on your Django admin app? You do not want to mess with the
 
 ## Updates
 
+2013-11-08: Version bump to 1.6.0. *Django 1.6* compatibility (therefore the new version), experimental *Django-CMS 2.4* support, *Python 3* compatibility.
 2013-05-29: Version bump to 0.4.1. Various bugfixes. See the CHANGELOG for more details  
 2013-05-27: Version bump to 0.4. **Now compatibile with django-cms **. See the CHANGELOG for more details  
 2013-02-06: list actions bugfix
