@@ -5,18 +5,6 @@ abstract: And do it without changing your existing codebase!
 
 Do you want Bootstrap on your Django admin app? You do not want to mess with the templates? That's why I did it for you!
 
-## Updates
-
-2013-11-08: Version bump to 1.6.0. *Django 1.6* compatibility (therefore the new version), experimental *Django-CMS 2.4* support, *Python 3* compatibility.
-2013-05-29: Version bump to 0.4.1. Various bugfixes. See the CHANGELOG for more details  
-2013-05-27: Version bump to 0.4. **Now compatibile with django-cms **. See the CHANGELOG for more details  
-2013-02-06: list actions bugfix
-2013-01-19: Registration template fixes
-2013-01-17: Version bump to 0.3. Some UI cleaning and documentation. See the CHANGELOG for more details  
-2012-12-19: Version bump to 0.2. Sortable inlines. See the CHANGELOG for more details  
-2012-11-20: Version bump to 0.1.1. Couple of bugfixing, Bootstrap upgraded to version 2.2.1, etc. See the CHANGELOG for more details  
-2012-11-16: Package addded to Pypi. You should now be able to pip install django-admin-bootstrapped. Thank Cyril for the help!
-
 ## What you'll get
 
 - a responsive interface (because Bootstrap is)
@@ -27,7 +15,7 @@ Do you want Bootstrap on your Django admin app? You do not want to mess with the
 
 ## Requirements
 
-Django 1.4.x
+Django >= 1.4.x
 
 ## Source code
 
@@ -38,10 +26,6 @@ On Github of course: [https://github.com/riccardo-forina/django-admin-bootstrapp
 - <code>pip install django-admin-bootstrapped</code> (virtualenv highly suggested)
 - add <code>django_admin_bootstrapped</code> into the INSTALLED_APPS list before <code>django.contrib.admin</code>
 - have fun!
-
-## Contribute!
-
-This is not a complete project. I know for sure that the tabular inline form wil not work, because I didn't style it. Surely there will be edge cases, but still this is a project I used in production. Unluckly my time is quite limited, so every kind of help will be gladly appreciated!
 
 ## Goodies
 
@@ -123,6 +107,40 @@ Or if you want to be more specific:
 If you decide on using `formfield_overrides` [you should be aware of its limitations with relation fields](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.formfield_overrides).
 
 This feature (and many more) was brought to you by [Jacob Magnusson](https://github.com/jmagnusson). Thank you Jacob!
+
+
+## Updates
+
+### 2013-11-08
+Version bump to 1.6.0. *Django 1.6* compatibility (therefore the new version), experimental *Django-CMS 2.4* support, *Python 3* compatibility.
+
+### 2013-05-29
+Version bump to 0.4.1. Various bugfixes. See the CHANGELOG for more details
+
+### 2013-05-27
+Version bump to 0.4. **Now compatibile with django-cms **. See the CHANGELOG for more details
+
+### 2013-02-06
+list actions bugfix
+
+### 2013-01-19
+Registration template fixes
+
+### 2013-01-17
+Version bump to 0.3. Some UI cleaning and documentation. See the CHANGELOG for more details
+
+### 2012-12-19
+Version bump to 0.2. Sortable inlines. See the CHANGELOG for more details
+
+### 2012-11-20
+Version bump to 0.1.1. Couple of bugfixing, Bootstrap upgraded to version 2.2.1, etc. See the CHANGELOG for more details
+
+### 2012-11-16
+Package addded to Pypi. You should now be able to pip install django-admin-bootstrapped. Thank Cyril for the help!
+
+## Contribute!
+
+This is not a complete project. I know for sure that the tabular inline form wil not work, because I didn't style it. Surely there will be edge cases, but still this is a project I used in production. Unluckly my time is quite limited, so every kind of help will be gladly appreciated!
 
 ## Screenshots
 
