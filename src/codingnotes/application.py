@@ -18,7 +18,7 @@ from werkzeug.contrib.atom import AtomFeed
 utc = pytz.utc
 
 if __name__ == '__main__':
-    DEBUG = False
+    DEBUG = True
 else:
     DEBUG = False
 HOSTNAME = socket.gethostname()
@@ -38,8 +38,8 @@ app = Flask(
 
 assets = Environment(app)
 assets.debug = DEBUG
-assets.manifest = False
-assets.cache = False
+assets.manifest = None
+assets.cache = None
 freezer = Freezer(app)
 pages_on_disk = FlatPages(app)
 

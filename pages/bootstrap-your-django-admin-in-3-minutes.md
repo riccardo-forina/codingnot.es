@@ -11,7 +11,7 @@ Do you want Bootstrap on your Django admin app? You do not want to mess with the
 - an heavy rewrite of the original django-admin templates, but with compatibility in mind.
 - collapsable elements
 - goodies like application name 'translations' without using the {% trans %} tag (to be documented)
-
+- you can choose within Bootstrap 2 and Bootstrap 3
 
 ## Requirements
 
@@ -26,6 +26,34 @@ On Github of course: [https://github.com/riccardo-forina/django-admin-bootstrapp
 - <code>pip install django-admin-bootstrapped</code> (virtualenv highly suggested)
 - add <code>django_admin_bootstrapped</code> into the INSTALLED_APPS list before <code>django.contrib.admin</code>
 - have fun!
+
+Your `INSTALLED_APPS` should look like this:
+
+
+    INSTALLED_APPS = (
+        'django_admin_bootstrapped',
+        'django.contrib.admin',
+
+        ...
+    )
+
+### Switch to Bootstrap3
+
+*Available from version 1.6.2:* Do the previous steps, then add `'django_admin_boostrapped.bootstrap3'` into the `INSTALLED_APPS` list __before__ `'django_admin_boostrapped'`.
+
+Your `INSTALLED_APPS` should look like this:
+
+
+    INSTALLED_APPS = (
+        'django_admin_bootstrapped.bootstrap3',
+        'django_admin_bootstrapped',
+        'django.contrib.admin',
+
+        ...
+    )
+
+<img src="/static/screens/django_admin_bootstrapped3_screen_0.png">
+
 
 ## Goodies
 
@@ -111,32 +139,87 @@ This feature (and many more) was brought to you by [Jacob Magnusson](https://git
 
 ## Updates
 
-### 2013-11-08
-Version bump to 1.6.0. *Django 1.6* compatibility (therefore the new version), experimental *Django-CMS 2.4* support, *Python 3* compatibility.
+==== 1.6.2 (2013-11-28) ====
 
-### 2013-05-29
-Version bump to 0.4.1. Various bugfixes. See the CHANGELOG for more details
+- Boostrap 3 theme (thanks to ze-phyr-us). In order to use it, add `django_admin_bootstrapped.bootstrap3` before `django_admin_bootstrapped` into your `INSTALLED_APPS` setting.
 
-### 2013-05-27
-Version bump to 0.4. **Now compatibile with django-cms **. See the CHANGELOG for more details
+==== 1.6.1 (2013-11-16) ====
 
-### 2013-02-06
-list actions bugfix
+- FIX #56: jquery now loaded from local installation, not the CDN
+- FIX #65: recent actions now has working urls
 
-### 2013-01-19
-Registration template fixes
+==== 1.6.0 (2013-11-08) ====
 
-### 2013-01-17
-Version bump to 0.3. Some UI cleaning and documentation. See the CHANGELOG for more details
+- django 1.6 compatibility
+- experimental support to Django-CMS 2.4. This is thanks to a fork of kayluhb, which has never been transformed in a PR, but still it's worth a try.
+- Python 3 compatibility (it has always been compatible, but now it's flagged appropriately as such)
+- changed version to 1.6 to reflect the 'Stable' status of the project and the compatibility with Django 1.6
 
-### 2012-12-19
-Version bump to 0.2. Sortable inlines. See the CHANGELOG for more details
+==== 0.4.3 (2013-08-27) ====
 
-### 2012-11-20
-Version bump to 0.1.1. Couple of bugfixing, Bootstrap upgraded to version 2.2.1, etc. See the CHANGELOG for more details
+- display errors properly for inlines (thanks to jmagnusson)
 
-### 2012-11-16
-Package addded to Pypi. You should now be able to pip install django-admin-bootstrapped. Thank Cyril for the help!
+==== 0.4.2 (2013-08-10) ====
+
+- checkboxes now properly aligned
+- admin title translation now working with a dedicated template
+
+==== 0.4.1 (2013-05-29) ====
+
+- tooltips for title attributes
+- generic relation lookup plugin
+- FIX: Twitter Bootstrap Responsive Navbar Broken on Small Screens (http://stackoverflow.com/questions/10185384/twitter-bootstrap-responsive-navbar-broken-on-small-screens) as reported by Fernando (https://twitter.com/fersan3)
+- FIX: login page responsive layout
+- FIX #6: autocapitalization disabled in the login form (mobile friendly)
+- FIX #13: boolean fields will show the help text if provided
+- FIX #36: list filters now partially usable on a mobile fine
+
+==== 0.4 (2013-05-27) ====
+
+- added compatibility for django-cms (thanks to kayluhb)
+- xhtml cleanup (thanks to Ricklef Wohlers)
+- UI cleanup (thanks to intuxicated & yceruto)
+- Twitter Bootstrap version 2.3.1 (thanks to yceruto)
+- admin static files now loaded using relative urls (thanks to jmagnusson)
+
+==== 0.3.2 (2013-02-06) ====
+
+- temporary bugfix for change_list actions
+
+==== 0.3.1 (2013-01-19) ====
+
+- registration template fixes
+
+
+- registration template fixes
+
+==== 0.3 (2013-01-17) ====
+
+- dropped tabs in homepage in favour of vanilla list of available applications
+- application dropdown menu for fast access in navbar
+- filters moved to a dropdown in navbar to gain screen space
+- added documentation for the translation goodies
+
+==== 0.2 (2012-12-04) ====
+
+- sortable inlines
+- inlines wrapped in wells for UI consistency
+
+==== 0.1.1 (2012-11-20) ====
+
+- added a test project
+- upgrade to Twitter Bootstrap 2.2.1 (issue #8)
+- implemented inline tabular view
+- fixed the messages styling
+- temporary fix for the page title
+- open is now the default style for the stacked inlines
+- filters in the change list views are now positioned on the left, to handle wide tables
+- pagination rendered with a smaller style (issue #2)
+
+==== 0.1.0 (2012-10-22) ====
+
+- first release
+
 
 ## Contribute!
 
