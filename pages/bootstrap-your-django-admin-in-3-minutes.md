@@ -11,7 +11,7 @@ Do you want Bootstrap on your Django admin app? You do not want to mess with the
 - an heavy rewrite of the original django-admin templates, but with compatibility in mind.
 - collapsable elements
 - goodies like application name 'translations' without using the {% trans %} tag (to be documented)
-- you can choose within Bootstrap 2 and Bootstrap 3
+- you can choose between Bootstrap 2 and Bootstrap 3
 
 ## Requirements
 
