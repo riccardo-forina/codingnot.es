@@ -22,7 +22,7 @@
               </div>
             </li>
             <li class="text--center one-third"><i class="icon-chat-alt-fill" style="display:inline-block;"></i> <a href="#disqus_thread"  style="display:inline-block;">Loading comments...</a></li>
-            <li class="text--right one-third"><a href="http://www.twitter.com/share?url={{ url_for("page", path=page.path, _external=True) }}"><i class="icon-twitter"></i> Share</a></li>
+            <li class="text--right one-third"><a href="http://www.twitter.com/intent/tweet/?url={{ url_for("page", path=page.path, _external=True) }}&text={{ page.title }}&via=riccardoforina&hashtags={% for page_tag in page.tags %}{{ page_tag }}{% if not loop.last %},{% endif %}{% endfor %}"><i class="icon-twitter"></i> Share</a></li>
           </ul>
         </div>
       </header>
