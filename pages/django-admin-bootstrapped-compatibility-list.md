@@ -9,7 +9,7 @@ Maybe you even know that with it you can also [translate an application name](ht
 
 But whay you may not know is how compatible the project is with the django apps ecosystem.
 
-Well it's good! This is a list of known complex apps that just works with django-admin-bootstrapped.  
+Well it's good! This is a list of known complex apps that just works with django-admin-bootstrapped.
 
 ## Known compatible django applications
 
@@ -24,6 +24,13 @@ The webshop for professionist with deadlines. [More...](http://www.satchmoprojec
 ### Zinnia's Blog
 
 Just another Django Weblog. [More...](http://django-blog-zinnia.com/blog/)
+
+### django-wysiwyg-redactor (since django-admin-bootstrapped 1.6.3)
+
+django-wysiwyg-redactor is a lightweight wysiwyg editor. [More...](https://github.com/douglasmiranda/django-wysiwyg-redactor)
+
+Instructions: you have to create a Widget on top of the RedactorEditor [like this](https://gist.github.com/riccardo-forina/7787078).
+
 
 ## More?
 
