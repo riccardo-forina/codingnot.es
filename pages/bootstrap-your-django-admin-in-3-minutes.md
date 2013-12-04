@@ -3,7 +3,10 @@ date: 2012-11-16
 tags: [django, bootstrap, django-admin-bootstrapped]
 abstract: And do it without changing your existing codebase!
 
+
 Do you want Bootstrap on your Django admin app? You do not want to mess with the templates? That's why I did it for you!
+
+[![PyPI version](https://pypip.in/d/django-admin-bootstrapped/badge.png)](https://pypi.python.org/pypi/django-admin-bootstrapped)
 
 ## What you'll get
 
