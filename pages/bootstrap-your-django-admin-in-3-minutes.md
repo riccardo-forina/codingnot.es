@@ -42,7 +42,7 @@ Your `INSTALLED_APPS` should look like this:
 
 ### Switch to Bootstrap3
 
-*Available from version 1.6.2:* Do the previous steps, then add `'django_admin_boostrapped.bootstrap3'` into the `INSTALLED_APPS` list __before__ `'django_admin_boostrapped'`.
+*Available from version 1.6.2:* Do the previous steps, then add `'django_admin_bootstrapped.bootstrap3'` into the `INSTALLED_APPS` list __before__ `'django_admin_bootstrapped'`.
 
 Your `INSTALLED_APPS` should look like this:
 
@@ -144,7 +144,7 @@ This feature (and many more) was brought to you by [Jacob Magnusson](https://git
 
 ==== 1.6.2 (2013-11-28) ====
 
-- Boostrap 3 theme (thanks to ze-phyr-us). In order to use it, add `django_admin_bootstrapped.bootstrap3` before `django_admin_bootstrapped` into your `INSTALLED_APPS` setting.
+- Bootstrap 3 theme (thanks to ze-phyr-us). In order to use it, add `django_admin_bootstrapped.bootstrap3` before `django_admin_bootstrapped` into your `INSTALLED_APPS` setting.
 
 ==== 1.6.1 (2013-11-16) ====
 
