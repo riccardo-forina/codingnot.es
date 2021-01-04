@@ -1,6 +1,5 @@
 Flask
 Flask-Assets
-Frozen-Flask
 Jinja2
 Werkzeug
 webassets

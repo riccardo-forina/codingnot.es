@@ -1,6 +1,7 @@
 *NOGIT*
 /media
 *virtualenv*
+venv
 newrelic.ini
 
 # Mac OS X
@@ -26,3 +27,5 @@ build/
 .pydevproject
 
 .sass-cache
+
+.vercel

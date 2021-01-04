@@ -10,7 +10,6 @@ from urllib.parse import urljoin
 from datetime import datetime, time
 from flask import Flask, render_template, request, url_for, Response
 from flask_assets import Environment, Bundle
-from flask_frozen import Freezer
 from collections import defaultdict
 from flask_flatpages import FlatPages
 from feedgen.feed import FeedGenerator
@@ -29,13 +28,12 @@ FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
 # LESS_BIN = os.path.join(SCRIPT_ROOT, '..', 'node_modules', 'less', 'bin', 'lessc')
 LESS_LINE_NUMBERS = 'mediaquery'
-FREEZER_DESTINATION = os.path.join(SITE_ROOT, '..', '..', 'build')
-FLATPAGES_ROOT = os.path.join(SITE_ROOT, '..', '..', 'pages')
+FLATPAGES_ROOT = os.path.join(SITE_ROOT, '..', 'pages')
 
 app = Flask(
     import_name='codingnotes',
-    static_folder=os.path.join(SITE_ROOT, '..', '..', 'static'),
-    template_folder=os.path.join(SITE_ROOT, '..', '..', 'templates'),
+    static_folder=os.path.join(SITE_ROOT, '..', 'static'),
+    template_folder=os.path.join(SITE_ROOT, '..', 'templates'),
 )
 
 assets = Environment(app)
@@ -44,7 +42,6 @@ assets.manifest = None
 assets.cache = None
 scss = Bundle('foo.scss', 'bar.scss', filters='pyscss', output='all.css')
 assets.register('scss_all', scss)
-freezer = Freezer(app)
 pages_on_disk = FlatPages(app)
 
 app.config.from_object(__name__)
@@ -127,12 +124,6 @@ def tag_feed(tag):
     pages = published_pages if not request.args.get('preview') else pages_on_disk
     tagged = [p for p in pages if tag in p.meta.get('tags', [])]
     return feed(tagged)
-
-
-@freezer.register_generator
-def tag_feed_generator():
-    for tag in get_tags():
-        yield 'tag_feed', {'tag': tag}
 
 
 @app.route('/tag/<string:tag>/')
@@ -328,7 +319,4 @@ app.jinja_env.filters['truncate_html_words'] = truncate_html_words
 
 
 if __name__ == '__main__':
-    if len(sys.argv) > 1 and sys.argv[1] == "build":
-        freezer.freeze()
-    else:
-        app.run('0.0.0.0', 10000)
+    app.run('0.0.0.0', 10000)
