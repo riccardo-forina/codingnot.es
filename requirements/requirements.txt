@@ -4,9 +4,8 @@ Frozen-Flask
 Jinja2
 Werkzeug
 webassets
-wsgiref
 Flask-FlatPages
 pytz
-newrelic
 jsmin
-cssmin
+feedgen
+easy_date

@@ -3,20 +3,18 @@ import sys
 import re
 import socket
 import pytz
-import urllib.request, urllib.parse, urllib.error
+import urllib
+import urllib2
 import json
-from datetime import datetime
-from urllib.parse import urljoin
+from urlparse import urljoin
 from datetime import datetime, time
 from flask import Flask, render_template, request, url_for, Response
-from flask_assets import Environment, Bundle
+from flask_assets import Environment
 from flask_frozen import Freezer
 from collections import defaultdict
 from flask_flatpages import FlatPages
-from feedgen.feed import FeedGenerator
-from date_converter import date_to_datetime
+from werkzeug.contrib.atom import AtomFeed
 
-author =  {'name':'Riccardo Forina','email':'riccardo@forina.eu'}
 utc = pytz.utc
 
 if __name__ == '__main__':
@@ -42,8 +40,6 @@ assets = Environment(app)
 assets.debug = DEBUG
 assets.manifest = None
 assets.cache = None
-scss = Bundle('foo.scss', 'bar.scss', filters='pyscss', output='all.css')
-assets.register('scss_all', scss)
 freezer = Freezer(app)
 pages_on_disk = FlatPages(app)
 
@@ -79,31 +75,27 @@ def make_external(url):
     return urljoin(request.url_root, url)
 
 
-def feed(articles): 
+def feed(articles):
     articles = sorted(articles, reverse=True,
                     key=lambda p: p.meta['date'])
-
-    fg = FeedGenerator()
-    fg.id(request.url_root)
-    fg.title('Coding notes by Riccardo Forina')
-    fg.author(author)
-    fg.link( href=request.url_root, rel='alternate' )
-    fg.logo(make_external(url_for('static', filename="icons/favicon.ico")))
-    fg.subtitle('This is a cool feed!')
-    fg.link( href=request.url, rel='self' )
-    fg.language('en')
-    
+    feed = AtomFeed(
+        'Coding notes by Riccardo Forina',
+        feed_url=request.url,
+        url=request.url_root,
+        icon=make_external(url_for('static', filename="icons/favicon.ico")),
+        logo=make_external(url_for('static', filename="icons/favicon.ico")),
+    )
     for article in articles:
-        permalink = make_external(url_for('page', path=article.path))
-        fe = fg.add_entry()
-        fe.id(permalink)
-        fe.title(article.meta['title'])
-        fe.content( content=str(article.html), type='html' )
-        fe.author(author)
-        fe.link( href=permalink, rel='self' )
-        fe.updated(utc.localize(date_to_datetime(article.meta.get('updated', article.meta['date']))))
-        fe.published(utc.localize(date_to_datetime(article.meta['date'])))
-    return Response(fg.atom_str(pretty=True), mimetype='application/atom+xml')
+        feed.add(
+            article.meta['title'],
+            unicode(article.html),
+            content_type='html',
+            author='Riccardo Forina',
+            url=make_external(url_for('page', path=article.path)),
+            updated=article.meta.get('updated', article.meta['date']),
+            published=article.meta['date'],
+        )
+    return feed.get_response()
 
 
 @app.errorhandler(404)
@@ -164,12 +156,12 @@ def gplus_share_count():
         "key": "p",
         "apiVersion": "v1"
     }]);
-    req = urllib.request.Request(
+    req = urllib2.Request(
         "https://clients6.google.com/rpc?key=AIzaSyCKSbrvQasunBoV16zDH9R33D88CeLr9gQ",
         data, {
             'Content-Type': 'application/json'
         })
-    f = urllib.request.urlopen(req)
+    f = urllib2.urlopen(req)
     response = f.read()
     f.close()
 
@@ -332,3 +324,8 @@ if __name__ == '__main__':
         freezer.freeze()
     else:
         app.run('0.0.0.0', 10000)
+
+
+if __name__ != '__main__':
+    import newrelic.agent
+    newrelic.agent.initialize(os.path.join(SITE_ROOT, 'newrelic.ini'))

@@ -13,8 +13,8 @@
 
     <link href="{{ url_for('site_feed') }}" rel="alternate" title="Coding notes by Riccardo Forina" type="application/atom+xml">
 
-    {% assets filters="scss,cssmin", output="build/main.css",
-          "css/icons.css", "css/style.scss" %}
+    {% assets filters="cssmin", output="build/main.css",
+          "css/compiled.css" %}
     <link rel="stylesheet" href="{{ ASSET_URL }}">
     {% endassets %}
     <link rel="shortcut icon" href="{{ url_for('static', filename="icons/favicon.ico") }}">
